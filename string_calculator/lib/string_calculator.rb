@@ -2,7 +2,10 @@ class StringCalculator
 
   #TODO method for addition
   def add(numbers)
-    0
+    return 0 if numbers.empty?
+    
+    delimiters = /,|\n/
+    numbers.split(delimiters).map(&:to_i).sum
   end
 
 end
